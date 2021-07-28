@@ -14,9 +14,3 @@ export class Widget {
         console.log(data);
     }
 }
-
-/*
-    Testing...
-*/
-const el: HTMLElement | null = document.querySelector("#widget");
-const w = new Widget(el, "600381707073486871");
