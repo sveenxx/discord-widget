@@ -1,0 +1,24 @@
+{
+  "name": "discord-widget",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "browser": "dist/browser.js",
+  "types": "dist/index.d.ts",
+    "targets": {
+        "main": {
+      "outputFormat": "esmodule"
+    },
+        "browser": {
+      "includeNodeModules": true
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel src/index.ts",
+    "build": "parcel build src/index.ts"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.3.1"
+  }
+}
