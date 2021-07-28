@@ -543,6 +543,13 @@
   dependencies:
     "@parcel/plugin" "2.0.0-beta.3.1"
 
+"@parcel/packager-ts@2.0.0-beta.3.1":
+  version "2.0.0-beta.3.1"
+  resolved "https://registry.yarnpkg.com/@parcel/packager-ts/-/packager-ts-2.0.0-beta.3.1.tgz#4ed0d40a4818750a434516cfdf09ef4c3d53e0bc"
+  integrity sha512-hiyFEi7EkeO/UIS3uA9XmQZvgtZYimPsBLHSuT3FPNusIfr7Utxo7csVhvNOpuMhpsAWaeuBLQ2ASBKUggpeFQ==
+  dependencies:
+    "@parcel/plugin" "2.0.0-beta.3.1"
+
 "@parcel/plugin@2.0.0-beta.3.1":
   version "2.0.0-beta.3.1"
   resolved "https://registry.yarnpkg.com/@parcel/plugin/-/plugin-2.0.0-beta.3.1.tgz#6f7e7ec87a101904a43c4538e01d07f45c49d096"
@@ -732,6 +739,23 @@
     "@parcel/plugin" "2.0.0-beta.3.1"
     "@parcel/utils" "2.0.0-beta.3.1"
     react-refresh "^0.9.0"
+
+"@parcel/transformer-typescript-types@2.0.0-beta.3.1":
+  version "2.0.0-beta.3.1"
+  resolved "https://registry.yarnpkg.com/@parcel/transformer-typescript-types/-/transformer-typescript-types-2.0.0-beta.3.1.tgz#53c03cfff51fbdd484555a0e860ec8b3526815cc"
+  integrity sha512-DyhZxpmJ6t8WXCuDC3CcmiQ1CAf1crPaHgULdKdYyIaEi2xRghdWpxqKBYEyU0TyJA+0pvauE+KW25mqINYeBg==
+  dependencies:
+    "@parcel/plugin" "2.0.0-beta.3.1"
+    "@parcel/source-map" "2.0.0-rc.1.0"
+    "@parcel/ts-utils" "2.0.0-beta.3.1"
+    nullthrows "^1.1.1"
+
+"@parcel/ts-utils@2.0.0-beta.3.1":
+  version "2.0.0-beta.3.1"
+  resolved "https://registry.yarnpkg.com/@parcel/ts-utils/-/ts-utils-2.0.0-beta.3.1.tgz#f5c9e164b63b8145245f8db656d03500f4e74b85"
+  integrity sha512-si9cQTKgi7ZWql3Ae5EF1f4ooj7UScyFCyLOhbVNoVIKL1p7vV/AxG16MUbA+8v94RgovZ4z5CkcGab7PGDosA==
+  dependencies:
+    nullthrows "^1.1.1"
 
 "@parcel/types@2.0.0-beta.3.1":
   version "2.0.0-beta.3.1"
@@ -4816,6 +4840,11 @@ type-fest@^0.20.2:
   version "0.20.2"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.20.2.tgz#1bf207f4b28f91583666cb5fbd327887301cd5f4"
   integrity sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==
+
+typescript@>=3.0.0:
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.5.tgz#4d1c37cc16e893973c45a06886b7113234f119f4"
+  integrity sha512-DqQgihaQ9cUrskJo9kIyW/+g0Vxsk8cDtZ52a3NGh0YNTfpUSArXSohyUGnvbPazEPLu398C0UxmKSOrPumUzA==
 
 unbox-primitive@^1.0.1:
   version "1.0.1"
