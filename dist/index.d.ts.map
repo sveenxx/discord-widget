@@ -1,1 +1,1 @@
-{"mappings":"ACKA;gBACwB,OAAO,EAAE,WAAW,GAAG,IAAI,EAAU,QAAQ,EAAE,MAAM;CAS5E","sources":["src/src/utils/fetchData.ts","src/src/index.ts","src/src/types.ts"],"sourcesContent":[null,null,null],"names":[],"version":3,"file":"index.d.ts.map","sourceRoot":"../"}
+{"mappings":"ACKA;gBACwB,OAAO,EAAE,WAAW,GAAG,IAAI,EAAU,QAAQ,EAAE,MAAM;CAW5E","sources":["src/src/utils/fetchData.ts","src/src/index.ts"],"sourcesContent":[null,null],"names":[],"version":3,"file":"index.d.ts.map","sourceRoot":"../"}
