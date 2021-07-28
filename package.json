@@ -1,6 +1,6 @@
 {
   "name": "discord-widget",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "type": "module",
   "main": "dist/index.js",
   "browser": "dist/browser/index.js",
