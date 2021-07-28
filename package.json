@@ -1,9 +1,9 @@
 {
   "name": "discord-widget",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "type": "module",
   "main": "dist/index.js",
-  "browser": "dist/browser.js",
+  "browser": "dist/browser/index.js",
   "types": "dist/index.d.ts",
   "targets": {
     "main": {
