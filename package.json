@@ -14,7 +14,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "dev": "parcel src/index.ts",
+    "dev": "parcel src/index.ts index.html",
     "build": "parcel build src/index.ts"
   },
   "devDependencies": {

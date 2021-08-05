@@ -384,26 +384,40 @@ function hmrAcceptRun(bundle/*: ParcelRequire */ , id/*: string */ ) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>DiscordWidget
-); // const el = document.createElement("dc");
- // const widget = new Widget(el, "600381707073486871");
+);
+var _utils = require("./utils");
 var _widget = require("./widget");
-var _fetchData = require("./utils/fetchData");
+const WIDGET_VERSION = "1.0.0";
 class DiscordWidget extends _widget.Widget {
-    async init(el, options) {
-        this.guild = await _fetchData.fetchData(this.options.guildId);
-        return new _widget.Widget(el, options);
+    /**
+     * Initializes the widget on the specified element
+     *
+     * @param element The DOM element to initialize
+     * @param guildId Guild identifier
+     * @param options [optional] Options for the widget
+     * @returns
+     */ static async init(element, guildId, options) {
+        const guild = await _utils.fetchData(guildId);
+        if (!element || element.nodeType !== 1) throw new TypeError(`exptect element to be DOM Element, gut got ${element}`);
+        if (!guild) throw new TypeError(`exptect element to be Object, gut got ${guild}`);
+        return new _widget.Widget(element, guild, options);
     }
 }
+DiscordWidget.version = WIDGET_VERSION;
+const test = document.getElementById("discord");
+DiscordWidget.init(test, "600381707073486871"); //test, "600381707073486871"
 
-},{"./widget":"2xBPh","./utils/fetchData":"2kEKQ","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"2xBPh":[function(require,module,exports) {
+},{"./widget":"2xBPh","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","./utils":"1k2Q7"}],"2xBPh":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Widget", ()=>Widget
 );
 var _utils = require("./utils");
 class Widget {
-    constructor(element, options){
+    constructor(element, guild, options){
         this.element = element;
+        this.options = options;
+        this.guild = guild;
         /**
          * Create html element for this widget
          */ const contentElement = this.element = document.createElement("div");
@@ -417,7 +431,30 @@ class Widget {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR","./utils":"1k2Q7"}],"367CR":[function(require,module,exports) {
+},{"./utils":"1k2Q7","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"1k2Q7":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _fetchData = require("./fetchData");
+parcelHelpers.exportAll(_fetchData, exports);
+var _setStyle = require("./setStyle");
+parcelHelpers.exportAll(_setStyle, exports);
+
+},{"./fetchData":"2kEKQ","./setStyle":"3tDZH","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"2kEKQ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "fetchData", ()=>fetchData
+);
+async function fetchData(id) {
+    try {
+        const URL1 = `https://discord.com/api/guilds/${id}/widget.json`;
+        const data = await (await fetch(URL1)).json();
+        return data;
+    } catch (err) {
+        throw new Error(err);
+    }
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"367CR":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -449,30 +486,7 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"1k2Q7":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _fetchData = require("./fetchData");
-parcelHelpers.exportAll(_fetchData, exports);
-var _setStyle = require("./setStyle");
-parcelHelpers.exportAll(_setStyle, exports);
-
-},{"./fetchData":"2kEKQ","./setStyle":"3tDZH","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"2kEKQ":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "fetchData", ()=>fetchData
-);
-async function fetchData(id) {
-    try {
-        const URL1 = `https://discord.com/api/guilds/${id}/widget.json`;
-        const data = await (await fetch(URL1)).json();
-        return data;
-    } catch (err) {
-        throw new Error(err);
-    }
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"3tDZH":[function(require,module,exports) {
+},{}],"3tDZH":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "setStyle", ()=>setStyle

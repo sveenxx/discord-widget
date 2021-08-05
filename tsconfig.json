@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+      "outDir": ".",
+      "baseUrl": ".",
+      "target": "es5",
+      "module": "es6",
+      "lib": [
+        "dom",
+        "es6"
+      ],
+      "moduleResolution": "node",
+      "experimentalDecorators": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "strictNullChecks": true,
+      "noImplicitThis": true,
+      "noUnusedLocals": true,
+      "importHelpers": true,
+      "declaration": true,
+      "sourceMap": true,
+      "paths": {
+        "discord-widget": [ "src/index" ],
+        "discord-widget/*": [ "src/*" ]
+      }
+    },
+    "exclude": [
+      "node_modules",
+      "build",
+      "dist"
+    ]
+}
