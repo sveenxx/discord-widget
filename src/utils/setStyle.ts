@@ -1,5 +1,10 @@
-export function setStyle(el: HTMLElement, styles: any) {
+export function setStyle(el: HTMLElement, styles: Object) {
     Object.keys(styles).forEach((prop) => {
-        console.log(prop);
+        el.style[
+            prop
+                .split(/(?=[A-Z])/)
+                .join("-")
+                .toLowerCase()
+        ] = styles[prop];
     });
 }

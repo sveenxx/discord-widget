@@ -17,7 +17,7 @@ export default class DiscordWidget extends Widget {
      * @returns
      */
     static async init(
-        element: HTMLElement,
+        element: HTMLElement | null,
         guildId: string,
         options?: WidgetOptions
     ): Promise<Widget> {
@@ -25,13 +25,13 @@ export default class DiscordWidget extends Widget {
 
         if (!element || element.nodeType !== 1) {
             throw new TypeError(
-                `exptect element to be DOM Element, gut got ${element}`
+                `exptect element to be DOM Element, but got ${element}`
             );
         }
 
         if (!guild) {
             throw new TypeError(
-                `exptect element to be Object, gut got ${guild}`
+                `exptect element to be Object, but got ${guild}`
             );
         }
 
@@ -39,8 +39,9 @@ export default class DiscordWidget extends Widget {
     }
 }
 
-const test = document.getElementById("discord");
+// (async () => {
+//     const test = document.getElementById("discord");
+//     const widget = await DiscordWidget.init(test, "600381707073486871");
 
-DiscordWidget.init(test, "600381707073486871");
-
-//test, "600381707073486871"
+//     console.log(widget);
+// })();

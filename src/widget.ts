@@ -26,17 +26,26 @@ export class Widget implements I.Widget {
         this.element = element;
         this.options = options;
         this.guild = guild;
+
         /**
          * Create html element for this widget
          */
-        const contentElement = (this.element = document.createElement("div"));
+        const contentElement = document.createElement("div");
 
         /**
          * Mark as discord widget
          */
-        contentElement.setAttribute("data-widget", "true");
+        contentElement.setAttribute("data-discord-widget", "true");
 
-        setStyle(contentElement, { position: "absolute" });
+        setStyle(contentElement, {
+            color: "white",
+            backgroundColor: "gray",
+            width: "400px",
+            height: "500px",
+            borderRadius: "15px",
+        });
+
+        this.element.appendChild(contentElement);
         console.log("123");
     }
 }
