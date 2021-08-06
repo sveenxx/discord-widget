@@ -1,10 +1,16 @@
 {
   "name": "discord-widget",
   "version": "1.1.2",
-  "type": "module",
+  "description": "♻️ Customize discord widget for your website",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "browser": "dist/browser/index.js",
+  "module": "dist/index.js",
+  "author": "Jakub Szołtysek",
+  "keywords": [
+    "discord",
+    "widget",
+    "custom"
+  ],
   "targets": {
     "main": {
       "outputFormat": "esmodule"
@@ -17,6 +23,10 @@
   "scripts": {
     "dev": "parcel src/index.ts index.html",
     "build": "parcel build src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sveenxx/discord-widget.git"
   },
   "devDependencies": {
     "@parcel/packager-ts": "2.0.0-rc.0",
