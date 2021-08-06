@@ -60,5 +60,5 @@ if you are not using any bundlers
 
 ## License
 
-Copyright © 2019 [Jakub Szołtysek](https://github.com/sveenxx).<br />
+Copyright © 2021 [Jakub Szołtysek](https://github.com/sveenxx).<br />
 This project is [MIT](https://github.com/sveenxx/discord-widget/blob/master/LICENSE) licensed.
