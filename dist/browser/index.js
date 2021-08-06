@@ -1,4 +1,14 @@
-async function $944e66fb72f7e12f$export$336ad58b686ca37(id) {
+function $parcel$defineInteropFlag(a) {
+  Object.defineProperty(a, '__esModule', {value: true, configurable: true});
+}
+function $parcel$export(e, n, v, s) {
+  Object.defineProperty(e, n, {get: v, set: s, enumerable: true, configurable: true});
+}
+
+$parcel$defineInteropFlag(module.exports);
+
+$parcel$export(module.exports, "default", () => $b287f046829478ed$export$9099ad97b570f7c);
+async function $18184c76a163e045$export$336ad58b686ca37(id) {
     try {
         const URL1 = `https://discord.com/api/guilds/${id}/widget.json`;
         const data = await (await fetch(URL1)).json();
@@ -9,7 +19,7 @@ async function $944e66fb72f7e12f$export$336ad58b686ca37(id) {
 }
 
 
-function $cd453b592329dacd$export$9d050de78026ecc9(el, styles) {
+function $787fc9e29e55dcc3$export$9d050de78026ecc9(el, styles) {
     Object.keys(styles).forEach((prop)=>{
         el.style[prop.split(/(?=[A-Z])/).join("-").toLowerCase()] = styles[prop];
     });
@@ -19,7 +29,7 @@ function $cd453b592329dacd$export$9d050de78026ecc9(el, styles) {
 
 
 
-class $0f2e64b2dafab7ac$export$6da0c54d420de4fd {
+class $c1d8316f3108d794$export$6da0c54d420de4fd {
     constructor(element, guild, options){
         this.element = element;
         this.options = options;
@@ -30,7 +40,7 @@ class $0f2e64b2dafab7ac$export$6da0c54d420de4fd {
         /**
          * Mark as discord widget
          */ contentElement.setAttribute("data-discord-widget", "true");
-        $cd453b592329dacd$export$9d050de78026ecc9(contentElement, {
+        $787fc9e29e55dcc3$export$9d050de78026ecc9(contentElement, {
             color: "white",
             backgroundColor: "gray",
             width: "400px",
@@ -43,8 +53,8 @@ class $0f2e64b2dafab7ac$export$6da0c54d420de4fd {
 }
 
 
-const $dba23c4f427410e2$var$WIDGET_VERSION = "1.0.0";
-class $dba23c4f427410e2$export$9099ad97b570f7c extends $0f2e64b2dafab7ac$export$6da0c54d420de4fd {
+const $b287f046829478ed$var$WIDGET_VERSION = "1.0.0";
+class $b287f046829478ed$export$9099ad97b570f7c extends $c1d8316f3108d794$export$6da0c54d420de4fd {
     /**
      * Initializes the widget on the specified element
      *
@@ -53,19 +63,17 @@ class $dba23c4f427410e2$export$9099ad97b570f7c extends $0f2e64b2dafab7ac$export$
      * @param options [optional] Options for the widget
      * @returns
      */ static async init(element, guildId, options) {
-        const guild = await $944e66fb72f7e12f$export$336ad58b686ca37(guildId);
+        const guild = await $18184c76a163e045$export$336ad58b686ca37(guildId);
         if (!element || element.nodeType !== 1) throw new TypeError(`exptect element to be DOM Element, but got ${element}`);
         if (!guild) throw new TypeError(`exptect element to be Object, but got ${guild}`);
-        return new $0f2e64b2dafab7ac$export$6da0c54d420de4fd(element, guild, options);
+        return new $c1d8316f3108d794$export$6da0c54d420de4fd(element, guild, options);
     }
-}
-$dba23c4f427410e2$export$9099ad97b570f7c.version = $dba23c4f427410e2$var$WIDGET_VERSION;
-(async ()=>{
-    const test = document.getElementById("discord");
-    const widget = await $dba23c4f427410e2$export$9099ad97b570f7c.init(test, "600381707073486871");
-    console.log(widget);
-})();
+} // (async () => {
+ //     const test = document.getElementById("discord");
+ //     const widget = await DiscordWidget.init(test, "600381707073486871");
+ //     console.log(widget);
+ // })();
+$b287f046829478ed$export$9099ad97b570f7c.version = $b287f046829478ed$var$WIDGET_VERSION;
 
 
-export {$dba23c4f427410e2$export$9099ad97b570f7c as default};
 //# sourceMappingURL=index.js.map

@@ -58,13 +58,12 @@ class $29132bf5159c333f$export$9099ad97b570f7c extends $4b03852290fffcba$export$
         if (!guild) throw new TypeError(`exptect element to be Object, but got ${guild}`);
         return new $4b03852290fffcba$export$6da0c54d420de4fd(element, guild, options);
     }
-}
+} // (async () => {
+ //     const test = document.getElementById("discord");
+ //     const widget = await DiscordWidget.init(test, "600381707073486871");
+ //     console.log(widget);
+ // })();
 $29132bf5159c333f$export$9099ad97b570f7c.version = $29132bf5159c333f$var$WIDGET_VERSION;
-(async ()=>{
-    const test = document.getElementById("discord");
-    const widget = await $29132bf5159c333f$export$9099ad97b570f7c.init(test, "600381707073486871");
-    console.log(widget);
-})();
 
 
 export {$29132bf5159c333f$export$9099ad97b570f7c as default};

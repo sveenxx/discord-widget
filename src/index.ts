@@ -39,9 +39,9 @@ export default class DiscordWidget extends Widget {
     }
 }
 
-(async () => {
-    const test = document.getElementById("discord");
-    const widget = await DiscordWidget.init(test, "600381707073486871");
+// (async () => {
+//     const test = document.getElementById("discord");
+//     const widget = await DiscordWidget.init(test, "600381707073486871");
 
-    console.log(widget);
-})();
+//     console.log(widget);
+// })();

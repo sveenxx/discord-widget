@@ -4,7 +4,8 @@
   "description": "♻️ Customize discord widget for your website",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "module": "dist/index.js",
+  "module": "index.js",
+  "type": "module",
   "author": "Jakub Szołtysek",
   "keywords": [
     "discord",
