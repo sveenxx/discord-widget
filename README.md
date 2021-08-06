@@ -56,7 +56,7 @@ if you are not using any bundlers
 
 ## Contact
 
-<img src="https://discordapp.com/api/guilds/600381707073486871/widget.png?style=banner1" alt="">
+[<img src="https://discordapp.com/api/guilds/600381707073486871/widget.png?style=banner1" alt="">](https://discord.gg/dS6uuAbyYX)
 
 ## License
 
