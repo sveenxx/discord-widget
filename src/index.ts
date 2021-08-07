@@ -3,10 +3,10 @@ import { fetchData } from "./utils";
 
 import { Widget } from "./widget";
 
-const WIDGET_VERSION = "1.0.0";
+declare var WIDGET_VERSION: string;
 
 export default class DiscordWidget extends Widget {
-    static version: string = WIDGET_VERSION;
+    static version = WIDGET_VERSION;
 
     /**
      * Initializes the widget on the specified element
@@ -14,7 +14,6 @@ export default class DiscordWidget extends Widget {
      * @param element The DOM element to initialize
      * @param guildId Guild identifier
      * @param options [optional] Options for the widget
-     * @returns
      */
     static async init(
         element: HTMLElement | null,
