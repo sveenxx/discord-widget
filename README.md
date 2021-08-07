@@ -42,9 +42,11 @@ import Widget from "discord-widget";
 if you are not using any bundlers
 
 ```html
-<script src="dist/index.js"></script>
+<script src="dist/discord-widget.js"></script>
 
 <script>
+    const Widget = window.DiscordWidget;
+
     (async () => {
         await Widget.init(
             document.querySelector("#my-widget-container"),
