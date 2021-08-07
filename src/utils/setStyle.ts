@@ -1,5 +1,5 @@
-export function setStyle(el: HTMLElement, styles: Object) {
-    Object.keys(styles).forEach((prop) => {
+export function setStyle(el: HTMLElement, styles: any) {
+    Object.keys(styles).forEach((prop: any) => {
         el.style[
             prop
                 .split(/(?=[A-Z])/)
