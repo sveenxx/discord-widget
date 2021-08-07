@@ -1,6 +1,5 @@
 {
     "compilerOptions": {
-      "allowSyntheticDefaultImports": true,
       "moduleResolution": "node",
       "experimentalDecorators": true,
       "noUnusedParameters": true,
@@ -13,15 +12,17 @@
       "sourceMap": true,
       "module": "es6",
       "target": "es5",
-      "lib": ["DOM", "ES2015"], 
-      "outDir": "./dist",
+      "lib": ["es2015", "dom"],  
+      "outDir": ".",
       "baseUrl": ".",
       "paths": {
-        "*": ["src/*"]
+        "discord-widget": [ "src/index" ],
+        "discord-widget/*": [ "src/*" ]
       }
     },
-    "include": [
-      "src/**/*",
-      "custom.d.ts"
+    "exclude": [
+      "node_modules",
+      "build", 
+      "dist"
     ]
 }
