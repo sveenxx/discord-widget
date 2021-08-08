@@ -3,7 +3,7 @@ import { fetchData } from "./utils";
 
 import { Widget } from "./widget";
 
-declare var WIDGET_VERSION: string;
+declare const WIDGET_VERSION: string;
 
 export default class DiscordWidget extends Widget {
     static version = WIDGET_VERSION;

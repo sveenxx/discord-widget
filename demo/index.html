@@ -11,7 +11,17 @@
 <body>
     <div id="discord"></div>
 
-    <script type="module" src="src/index.ts"></script>
+    <script src="../dist/discord-widget.js"></script>
+    <script>
+        const Widget = window.DiscordWidget;
+
+        (async () => {
+            await Widget.init(
+                document.querySelector("#discord"),
+                "server-id"
+            );
+        })();
+    </script>
 </body>
 
 </html>

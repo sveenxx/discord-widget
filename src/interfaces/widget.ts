@@ -8,9 +8,25 @@ export type Guild = {
     id: string;
     name: string;
     instant_invite: string;
-    channels: Object[];
-    members: Object[];
+    channels: Channels[];
+    members: Members[];
     presence_count: number;
+};
+
+export type Channels = {
+    id: string;
+    name: string;
+    position: number;
+};
+
+export type Members = {
+    id: string;
+    username: string;
+    discriminator: string;
+    avatar: null;
+    status: string;
+    game?: { name: string };
+    avatar_url: string;
 };
 
 export interface Widget {
