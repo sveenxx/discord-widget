@@ -1,27 +1,28 @@
 {
-    "compilerOptions": {
-      "allowSyntheticDefaultImports": true,
-      "moduleResolution": "node",
-      "experimentalDecorators": true,
-      "noUnusedParameters": true,
-      "noImplicitReturns": true,
-      "strictNullChecks": true,
-      "noImplicitThis": true,
-      "noUnusedLocals": true,
-      "importHelpers": true,
-      "declaration": true,
-      "sourceMap": true,
-      "module": "es6",
-      "target": "es5",
-      "lib": ["DOM", "ES2015"], 
-      "outDir": "./dist",
-      "baseUrl": ".",
-      "paths": {
-        "*": ["src/*"]
-      }
-    },
-    "include": [
-      "src/**/*",
-      "custom.d.ts"
-    ]
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": true,
+    "module": "es6",
+    "target": "es5",
+    "lib": ["es2015", "dom"],  
+    "outDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "discord-widget": [ "src/index" ],
+      "discord-widget/*": [ "src/*" ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "build", 
+    "dist"
+  ]
 }

@@ -51,7 +51,7 @@ module.exports = function () {
             modules: false,
         },
         resolve: {
-            extensions: [".ts", ".js"],
+            extensions: [".ts, .js"],
         },
     };
 

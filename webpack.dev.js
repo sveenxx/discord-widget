@@ -13,6 +13,7 @@ module.exports = {
         library: "DiscordWidget",
         libraryTarget: "umd",
         libraryExport: "default",
+        umdNamedDefine: true,
         globalObject: "this",
     },
     plugins: [
