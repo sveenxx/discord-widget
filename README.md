@@ -31,7 +31,7 @@ $ yarn add discord-widget
 ```js
 import Widget from "discord-widget";
 
-(async () => {
+(async function () {
     await Widget.init(
         document.querySelector("#my-widget-container"),
         "server-id"
@@ -45,10 +45,8 @@ if you are not using any bundlers
 <script src="dist/discord-widget.js"></script>
 
 <script>
-    const Widget = window.DiscordWidget;
-
-    (async () => {
-        await Widget.init(
+    (async function () {
+        await DiscordWidget.init(
             document.querySelector("#my-widget-container"),
             "server-id"
         );

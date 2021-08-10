@@ -1,28 +1,27 @@
 {
-    "compilerOptions": {
-      "moduleResolution": "node",
-      "experimentalDecorators": true,
-      "noUnusedParameters": true,
-      "noImplicitReturns": true,
-      "strictNullChecks": true,
-      "noImplicitThis": true,
-      "noUnusedLocals": true,
-      "importHelpers": true,
-      "declaration": true,
-      "sourceMap": true,
-      "module": "es6",
-      "target": "es5",
-      "lib": ["es2015", "dom"],  
-      "outDir": ".",
-      "baseUrl": ".",
-      "paths": {
-        "discord-widget": [ "src/index" ],
-        "discord-widget/*": [ "src/*" ]
-      }
-    },
-    "exclude": [
-      "node_modules",
-      "build", 
-      "dist"
-    ]
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "target": "es2017",
+    "lib": ["esnext", "dom", "es6"],  
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "discord-widget": [ "src/index" ],
+      "discord-widget/*": [ "src/*" ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "build", 
+    "dist",
+    "webpack"
+  ]
 }

@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const CircularDependencyPlugin = require("circular-dependency-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { merge } = require("webpack-merge");
 
 const prodConfig = require("./webpack.prod");
@@ -11,12 +12,20 @@ const resolveApp = (relativePath) => path.resolve(__dirname, relativePath);
 module.exports = function () {
     const isEnvProduction = process.env.NODE_ENV === "production";
     const commonConfig = {
+        devtool: "source-map",
+
         entry: "./src/index.ts",
+
         output: {
             filename: "[name].js",
             path: path.resolve(__dirname, "dist"),
+            libraryTarget: "umd",
         },
-        devtool: "source-map",
+
+        resolve: {
+            extensions: [".ts"],
+        },
+
         module: {
             rules: [
                 {
@@ -24,15 +33,10 @@ module.exports = function () {
                     use: [
                         {
                             loader: "ts-loader",
-                            options: {
-                                compilerOptions: {
-                                    declaration: false,
-                                },
-                            },
                         },
                     ],
                     include: [resolveApp("src")],
-                    exclude: [/node_modules/],
+                    exclude: /(node_modules|dist)/,
                 },
             ],
         },
@@ -46,12 +50,10 @@ module.exports = function () {
                 exclude: /node_modules/,
                 failOnError: true,
             }),
+            new CleanWebpackPlugin(),
         ],
         stats: {
             modules: false,
-        },
-        resolve: {
-            extensions: [".ts, .js"],
         },
     };
 

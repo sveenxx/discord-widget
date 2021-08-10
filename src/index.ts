@@ -2,6 +2,7 @@ import { WidgetOptions } from "./interfaces/";
 import { fetchData } from "./utils";
 
 import { Widget } from "./widget";
+import { attachStyle, detachStyle } from "./style";
 
 declare const WIDGET_VERSION: string;
 
@@ -34,13 +35,22 @@ export default class DiscordWidget extends Widget {
             );
         }
 
+        attachStyle();
+
         return new Widget(element, guild, options);
     }
+
+    /**
+     * Attaches default styles to current document.
+     */
+    static attachStyle() {
+        return attachStyle();
+    }
+
+    /**
+     * Removes default styles from current document.
+     */
+    static detachStyle() {
+        return detachStyle();
+    }
 }
-
-// (async () => {
-//     const test = document.getElementById("discord");
-//     const widget = await DiscordWidget.init(test, "600381707073486871");
-
-//     console.log(widget);
-// })();
