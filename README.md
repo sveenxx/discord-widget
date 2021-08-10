@@ -54,6 +54,23 @@ if you are not using any bundlers
 </script>
 ```
 
+## Example
+
+```js
+import Widget from "discord-widget";
+
+const container = document.querySelector("#my-widget-container")
+
+(async function () {
+    async function () {
+        await Widget.init(container, "600381707073486871");
+    }
+
+    //Use it if you want to disable default styles and use your own
+    Widget.detachStyle();
+})()
+```
+
 ## Contact
 
 [<img src="https://discordapp.com/api/guilds/600381707073486871/widget.png?style=banner1" alt="">](https://discord.gg/dS6uuAbyYX)
