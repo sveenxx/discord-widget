@@ -37,15 +37,12 @@ export class Widget implements I.Widget {
          */
         contentElement.setAttribute("data-discord-widget", "true");
 
+        contentElement.className = "discord-widget";
+
         setStyle(contentElement, {
-            color: "white",
-            backgroundColor: "gray",
-            width: "400px",
-            height: "500px",
             borderRadius: "15px",
         });
 
         this.element.appendChild(contentElement);
-        console.log("123");
     }
 }

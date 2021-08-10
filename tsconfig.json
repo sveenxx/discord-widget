@@ -3,17 +3,15 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "strictNullChecks": true,
-    "noImplicitThis": true,
     "noUnusedLocals": true,
     "importHelpers": true,
     "declaration": true,
     "sourceMap": true,
-    "module": "es6",
-    "target": "es5",
-    "lib": ["es2015", "dom"],  
-    "outDir": ".",
+    "jsx": "react",
+    "module": "commonjs",
+    "target": "es2017",
+    "lib": ["esnext", "dom", "es6"],  
+    "outDir": "dist",
     "baseUrl": ".",
     "paths": {
       "discord-widget": [ "src/index" ],
@@ -23,6 +21,7 @@
   "exclude": [
     "node_modules",
     "build", 
-    "dist"
+    "dist",
+    "webpack"
   ]
 }

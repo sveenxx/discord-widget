@@ -1,7 +1,6 @@
 export type WidgetOptions = {
-    guildId: string;
-    test: number;
-    x: number;
+    connectButton: boolean;
+    styles: Record<string, unknown>;
 };
 
 export type Guild = {
