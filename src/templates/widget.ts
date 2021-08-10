@@ -21,7 +21,7 @@ export const getWidget = (guild) =>
                 <div class="widget-title">MEMBERS ONLINE</div>
                 <div class="widget-wrapper">
                     ${getMemeberList(guild)}
-                </div>
+                </div> 
             </div>
         </div>
         <div class="widget-footer">
