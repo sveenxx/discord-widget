@@ -62,9 +62,7 @@ import Widget from "discord-widget";
 const container = document.querySelector("#my-widget-container")
 
 (async function () {
-    async function () {
-        await Widget.init(container, "600381707073486871");
-    }
+    await Widget.init(container, "600381707073486871");
 
     //Use it if you want to disable default styles and use your own
     Widget.detachStyle();
