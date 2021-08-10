@@ -20,7 +20,7 @@ export const getWidget = (guild) =>
             <div class="widget-wrapper">
                 <div class="widget-title">MEMBERS ONLINE</div>
                 <div class="widget-wrapper">
-                    ${getMemeberList(data)}
+                    ${getMemeberList(guild)}
                 </div>
             </div>
         </div>
