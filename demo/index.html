@@ -10,14 +10,17 @@
 
 <body>
     <div id="discord"></div>
+
     <script src="../dist/discord-widget.js"></script>
     <script>
-        (async function () {
-            const discord = await DiscordWidget.init(
+        const Widget = window.DiscordWidget;
+
+        (async function() {
+            await Widget.init(
                 document.querySelector("#discord"),
-                "600381707073486871",
+                "server-id"
             );
-        })()
+        })();
     </script>
 </body>
 

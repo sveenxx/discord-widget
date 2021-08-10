@@ -2,7 +2,6 @@ import { WidgetOptions } from "./interfaces/";
 import { fetchData } from "./utils";
 
 import { Widget } from "./widget";
-
 import { attachStyle, detachStyle } from "./style";
 
 declare const WIDGET_VERSION: string;
