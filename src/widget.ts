@@ -42,6 +42,7 @@ export class Widget implements I.Widget {
         /**
          * Create template
          */
+
         contentElement.innerHTML = getWidget(this.guild);
 
         this.element.appendChild(contentElement);

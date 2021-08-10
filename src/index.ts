@@ -29,9 +29,9 @@ export default class DiscordWidget extends Widget {
             );
         }
 
-        if (!guild) {
+        if (!guild?.id) {
             throw new TypeError(
-                `exptect element to be Object, but got ${guild}`
+                `exptect element to be Server ID, but got ${guildId}`
             );
         }
 
