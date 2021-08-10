@@ -1,6 +1,6 @@
 {
   "name": "discord-widget",
-  "version": "1.1.9",
+  "version": "1.2.0",
   "description": "♻️ Customize discord widget for your website",
   "main": "dist/discord-widget.js",
   "jsnext:main": "dist/discord-widget.js",
