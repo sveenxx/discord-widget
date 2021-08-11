@@ -2,8 +2,10 @@ import { template } from "../template";
 import { getMemeberList } from "./widgetMemberList";
 
 export const getWidget = (guild) =>
-    template(guild, (data) =>
-        `
+    template(
+        guild,
+        (data) =>
+            `
         <div class="widget-header">
             <a class="widget-logo" href="http://discord.com" target="_blank"></a>
             <span class="widget-status"><strong>${
@@ -30,5 +32,5 @@ export const getWidget = (guild) =>
                 data.instant_invite
             }" target="_blank">Connect</a>
         </div>
-    `.replaceAll(",", "")
+    `
     );

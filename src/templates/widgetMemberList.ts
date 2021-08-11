@@ -2,9 +2,10 @@ import { template } from "../template";
 
 export const getMemeberList = (guild) =>
     template(guild, (data) =>
-        data.members.map(
-            (member) =>
-                `
+        data.members
+            .map(
+                (member) =>
+                    `
     <div class="widget-member">                         
         <div>
             <div class="widget-member-avatar">
@@ -23,5 +24,6 @@ export const getMemeberList = (guild) =>
         }
     </div>
 `
-        )
+            )
+            .join("")
     );

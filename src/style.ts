@@ -79,7 +79,8 @@ const WIDGET_STYLE = `
     }
 
     .widget-footer {
-        min-height: 30px;
+        height: 42px;
+        box-sizing: border-box;
         background-color: #202225;
         padding: 6px 6px 6px 20px;
         -webkit-box-shadow: 0 -1px 18px rgb(0 0 0 / 20%), 0 -1px 0 rgb(0 0 0 / 20%);
@@ -106,7 +107,7 @@ const WIDGET_STYLE = `
     }
 
     .widget-join-button {
-        color: #fff;
+        color: #fff!important;
         text-decoration: none;
         border: 1px solid #212325;
         border-radius: 4px;
