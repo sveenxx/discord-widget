@@ -1,7 +1,8 @@
 import { template } from "../template";
 import { getMemeberList } from "./widgetMemberList";
+import { WidgetOptions, Guild } from "../interfaces/";
 
-export const getWidget = (guild) =>
+export const getWidget = (guild: Guild, options: WidgetOptions): string =>
     template(
         guild,
         (data) =>
@@ -28,9 +29,11 @@ export const getWidget = (guild) =>
         </div>
         <div class="widget-footer">
             <span class="widget-footer-text">Free voice chat from Discord</span>
-            <a class="widget-join-button" href="${
-                data.instant_invite
-            }" target="_blank">Connect</a>
+            ${
+                !options.connectButton
+                    ? ``
+                    : `<a class="widget-join-button" href="${data.instant_invite}" target="_blank">Connect</a>`
+            }
         </div>
     `
     );

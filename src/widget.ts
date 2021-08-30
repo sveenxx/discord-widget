@@ -1,6 +1,7 @@
 import * as I from "./interfaces/";
 import { WidgetOptions, Guild } from "./interfaces/";
 import { getWidget } from "./templates";
+import { Options } from "./options";
 
 export class Widget implements I.Widget {
     /**
@@ -24,7 +25,7 @@ export class Widget implements I.Widget {
         options?: WidgetOptions | undefined
     ) {
         this.element = element;
-        this.options = options;
+        this.options = new Options(options);
         this.guild = guild;
 
         /**
@@ -36,14 +37,12 @@ export class Widget implements I.Widget {
          * Mark as discord widget
          */
         contentElement.setAttribute("data-discord-widget", "true");
-
         contentElement.className = "discord-widget";
 
         /**
          * Create template
          */
-
-        contentElement.innerHTML = getWidget(this.guild);
+        contentElement.innerHTML = getWidget(this.guild, this.options);
 
         this.element.appendChild(contentElement);
     }
