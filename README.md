@@ -71,7 +71,7 @@ const container = document.querySelector("#my-widget-container")
 
 ## Contact
 
-[<img src="https://discordapp.com/api/guilds/600381707073486871/widget.png?style=banner1" alt="">](https://discord.gg/dS6uuAbyYX)
+[<img src="https://discordapp.com/api/guilds/775763638714630144/widget.png?style=banner1" alt="">](https://discord.gg/yWJRMftbaK)
 
 ## License
 
